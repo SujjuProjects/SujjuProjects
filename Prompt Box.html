@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2> JavaScript Prompt Bodx </h2>
+
+        <p id = "demo"></p>
+
+        <button onclick="myFucntion()">Try</button>
+        <body style ="background-color: aqua; ">
+
+        <script>
+            function myFucntion()
+            {
+                var person = prompt("Please enter your name:");
+                if(person == null || person == "")
+                {
+                    txt = "User cancelled the prompt";
+                }
+                else
+                {
+                    txt = "Hello " + person + "! How are you?";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    
+    </body>
+</html>

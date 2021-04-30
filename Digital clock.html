@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon2.png">
+    <style>
+        h1
+        {
+            text-align: center;
+            color: cyan;
+            margin-top: 120px;            
+        }
+        body
+        {
+          background-color: black;
+        }
+        #Clock
+        {
+            font-size: 150px;
+            color: rgb(255, 255, 255);
+            width: 900px;
+            height: 190px;
+            margin: 265px;
+            margin-top: 150px;
+            text-align: center;
+            border: 2px solid rgb(145, 97, 150);
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>MY DIGITAL CLOCK</u></h1>
+
+    <div id="Clock">08:08:58</div>
+
+    <script>
+        setInterval(showTime, 1000);
+
+        function showTime()
+        {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM";
+
+            if(hour > 12)
+            {
+                hour = hour - 12;
+                am_pm = "PM"
+            }
+            if(hour == 0)
+            {
+                hour = 12;
+                am_pm = "AM";
+            }
+        
+        
+         hour = hour < 10 ? "0" + hour:hour;
+         min = min < 10 ? "0" + min:min;
+         sec = sec < 10 ? "0" + sec:sec;
+
+         let currentTime = hour + ":" + min + ":" + sec + " " + am_pm;
+
+         document.getElementById("Clock").innerHTML = currentTime;
+        }
+
+        showTime()
+    </script>
+
+</body>
+
+</html>

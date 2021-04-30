@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <title>Sujit</title>
+    <script>
+        function myFunction()
+        {
+            var txt,txt1 ;
+            
+            if (confirm("Press Ok To Continue."))
+            {
+                txt = "Your response is Submitted.";
+            }
+            else
+            {
+                txt1 = "Your response is not Submitted.";
+            }
+            document.getElementById("demo").innerHTML = txt;
+            document.getElementById("demo 1").innerHTML = txt1;
+        }
+    </script>
+    <body style = "background-color: black;">
+        <h1 style = "text-align: center;color: white;"> JavaScript Confirm Box </h1>
+        
+        <button onclick="myFunction()" style="margin-left: 650px;height: 50px;width: 100px;background-color: gold;">Confirm</button>        
+
+        <p id = "demo" style="color:green;"></p>
+        <p id = "demo 1" style="color:red;"></p>
+    </body>
+</html>
